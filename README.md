@@ -14,7 +14,7 @@ yarn add @ream/collect-fs-routes
 ## Usage
 
 ```js
-const { collectRoutes } = require('collect-fs-routes')
+const { collectRoutes } = require('@ream/collect-fs-routes')
 
 const routes = collectRoutes(options)
 const routesString = renderRoutes(routes)
