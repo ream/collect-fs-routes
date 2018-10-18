@@ -1,0 +1,33 @@
+{
+  "name": "@ream/collect-fs-routes",
+  "version": "0.0.0",
+  "description": "Collect routes from file system for vue-router.",
+  "repository": {
+    "url": "ream/collect-fs-routes",
+    "type": "git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "npm run lint && ava",
+    "lint": "xo"
+  },
+  "author": "EGOIST <0x142857@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "lodash.sortby": "^4.7.0"
+  },
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "eslint-config-rem": "^3.0.0",
+    "xo": "^0.18.0"
+  },
+  "xo": {
+    "extends": "rem"
+  }
+}
