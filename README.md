@@ -1,7 +1,7 @@
 
 # collect-fs-routes
 
-[![NPM version](https://img.shields.io/npm/v/@ream/collect-fs-routes.svg?style=flat)](https://npmjs.com/package/@ream/collect-fs-routes) [![NPM downloads](https://img.shields.io/npm/dm/@ream/collect-fs-routes.svg?style=flat)](https://npmjs.com/package/collect-fs-routes) [![CircleCI](https://circleci.com/gh/ream/collect-fs-routes/tree/master.svg?style=shield)](https://circleci.com/gh/ream/collect-fs-routes/tree/master)
+[![NPM version](https://badgen.net/npm/v/@ream/collect-fs-routes)](https://npmjs.com/package/@ream/collect-fs-routes) [![NPM downloads](https://badgen.net/npm/dm/@ream/collect-fs-routes)](https://npmjs.com/package/collect-fs-routes) [![CircleCI](https://badgen.net/circleci/github/ream/collect-fs-routes/master)](https://circleci.com/gh/ream/collect-fs-routes/tree/master)
 
 > This is used by Ream and similar Vue SSR / static site generator.
 
