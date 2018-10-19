@@ -73,7 +73,8 @@ async function collectRoutes({
   pagesDir = 'pages',
   componentPrefix = '',
   basePath = '/',
-  match = /\.(vue|js)$/i
+  match = /\.(vue|js)$/i,
+  statCache
 } = {}) {
   if (!(await pathExists(pagesDir))) {
     return []
@@ -90,6 +91,9 @@ async function collectRoutes({
       collector.add(name, { dir: name })
     } else if (stats.isFile()) {
       if (name.match(match)) {
+        if (statCache) {
+          statCache[name] = stats
+        }
         collector.add(path.basename(name, path.extname(name)), { file: name })
       }
     }

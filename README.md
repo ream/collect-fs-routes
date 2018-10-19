@@ -52,6 +52,13 @@ The base path for `path` property in vue-roouter route records.
 
 The regular expression that is used to match page components.
 
+#### options.statCache
+
+- Type: `Object`
+- Default: `undefined`
+
+Cache of `fs.stat` results.
+
 ## Contributing
 
 1. Fork it!
