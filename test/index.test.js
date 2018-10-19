@@ -1,3 +1,4 @@
+const fs = require('fs')
 const path = require('path')
 const test = require('ava')
 const { collectRoutes } = require('../')
@@ -10,5 +11,7 @@ test('main', async t => {
     statCache
   })
   t.snapshot(routes, 'routes')
-  t.snapshot(statCache, 'stat cache')
+  for (const name of Object.keys(statCache)) {
+    t.true(statCache[name] instanceof fs.Stats)
+  }
 })
