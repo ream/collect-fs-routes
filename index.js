@@ -13,6 +13,8 @@ const pathExists = fp =>
 const readDir = promisify(fs.readdir)
 const readStat = promisify(fs.stat)
 
+const filenamify = str => str.replace(/[^a-z0-9\-_]/g, '-').replace(/^-+/, '')
+
 function renderRoutes(routes) {
   return `
   [
@@ -21,7 +23,7 @@ function renderRoutes(routes) {
         route => `
     {
       path: ${JSON.stringify(route.path)},
-      component: () => import(${JSON.stringify(route.component)}),
+      component: () => import(/* webpackChunkName: "pages--${filenamify(route.component)}" */ ${JSON.stringify(route.component)}),
       ${route.children ? `children: ${renderRoutes(route.children)}` : ``}
     }`
       )
