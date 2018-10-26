@@ -1,6 +1,6 @@
 {
   "name": "@ream/collect-fs-routes",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Collect routes from file system for vue-router.",
   "repository": {
     "url": "ream/collect-fs-routes",
