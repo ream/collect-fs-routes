@@ -15,7 +15,7 @@ const readStat = promisify(fs.stat)
 
 const filenamify = str => str.replace(/[^a-z0-9\-_]/g, '-').replace(/^-+/, '')
 
-function renderRoutes(routes) {
+function renderRoutes(routes, { chunkPrefix = '' } = {}) {
   return `
   [
     ${routes
@@ -23,7 +23,7 @@ function renderRoutes(routes) {
         route => `
     {
       path: ${JSON.stringify(route.path)},
-      component: () => import(/* webpackChunkName: "pages--${filenamify(route.component)}" */ ${JSON.stringify(route.component)}),
+      component: () => import(/* webpackChunkName: "${chunkPrefix}${filenamify(route.component)}" */ ${JSON.stringify(route.component)}),
       ${route.children ? `children: ${renderRoutes(route.children)}` : ``}
     }`
       )
